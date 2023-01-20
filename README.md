@@ -10,5 +10,6 @@
    * Relevant Info
    * Interests
    * GitHub Profile
-
+## Link to website :
+ - [https://ntuifranklin.github.io/cmsc389T-web-template/](https://ntuifranklin.github.io/cmsc389T-web-template/)
 
