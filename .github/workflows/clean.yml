@@ -9,10 +9,10 @@ jobs:
       - name: testing
         uses: appleboy/ssh-action@master
         with:
-          key: ${{ secrets.KEY }}
+          # key: ${{ secrets.KEY }}
           host: ${{ secrets.HOST }}
-          # username: ${{ secrets.USERNAME }}
-          # password: ${{ secrets.PASSWORD }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
             cd /pub/fnkokamn/
