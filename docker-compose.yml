@@ -4,9 +4,16 @@ services:
   static-webpage:
     build:
       dockerfile: Dockerfile
+    image: node-web-app
+    container_name: website
+    volumes:
+      - node-app-volume:/home/node/app
+    restart: unless-stopped
+    ports:
+      - "80:8080"
 
 volumes:
-  web-root:
+  node-app-volume:
     driver: local
     driver_opts:
       type: none
