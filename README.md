@@ -10,8 +10,12 @@
    * Relevant Info
    * Interests
    * GitHub Profile
-## Link to website :
+## Link to personal website :
  - [https://ntuifranklin.github.io/cmsc389T-web-template/](https://ntuifranklin.github.io/cmsc389T-web-template/)
+ 
+ 
+## Link to terpconnect website :
+ - [https://terpconnect.umd.edu/~fnkokamn/](https://terpconnect.umd.edu/~fnkokamn/)
 
 ## Tools used 
 
