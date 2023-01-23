@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing
-        uses: appleboy/ssh-action@main
+        uses: appleboy/ssh-action@master
         with:
           key: ${{ secrets.KEY }}
           host: ${{ secrets.HOST }}
