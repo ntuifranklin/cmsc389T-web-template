@@ -1,0 +1,22 @@
+name: deploy workflow
+on:
+  push:
+jobs:
+  clone:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+        uses: appleboy/ssh-action@main
+        with:
+          key: ${{ secrets.KEY }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secres.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /pub/fnkokamn/cmsc389T-web-template
+            git pull
+            cd ..
+            cp -r cmsc389T-web-template/* .
+            

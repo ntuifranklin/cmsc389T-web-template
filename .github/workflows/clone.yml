@@ -1,0 +1,21 @@
+name: clone workflow
+on:
+  workflow_dispatch:
+jobs:
+  clone:
+    name: Clone
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+        uses: appleboy/ssh-action@main
+        with:
+          key: ${{ secrets.KEY }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secres.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /pub/fnkokamn
+            git clone git@github.com:ntuifranklin/cmsc389T-web-template.git
+            cp -r cmsc389T-web-template/* .
+            

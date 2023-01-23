@@ -1,0 +1,21 @@
+name: clean workflow
+on:
+  push:
+jobs:
+  clone:
+    name: Clean
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+        uses: appleboy/ssh-action@main
+        with:
+          key: ${{ secrets.KEY }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secres.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /pub/fnkokamn/
+            unalias rm
+            rm -fr *
+            
