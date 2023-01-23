@@ -1,38 +1,14 @@
-version: '3'
+version: "3"
 
 services:
-  node-web-app:
-    #fill out the configuration here
   static-webpage:
     build:
       dockerfile: Dockerfile
-    networks:
-      - app-network
-  
-  #the nginx configuration is given below
-  #the website will run on localhost:80 
-  webserver:
-    image: node-web-app
-    container_name: website
-    restart: unless-stopped
-    ports:
-      - "80:8080"
-    volumes:
-      - web-root:/home/node/app
-    depends_on:
-      - node-web-app
-    networks:
-      - app-network
 
 volumes:
   web-root:
     driver: local
     driver_opts:
       type: none
-      #fill out your absolute path to your folder here
       device: /c/Users/Admin/cmsc389T-web-template
       o: bind
-
-networks:
-  app-network:
-    driver: bridge
