@@ -17,6 +17,6 @@ jobs:
           script: |
             cd /pub/fnkokamn/cmsc389T-web-template
             git pull
-            cd ..
+            cd /pub/fnkokamn/
             cp -rf cmsc389T-web-template/* .
             
